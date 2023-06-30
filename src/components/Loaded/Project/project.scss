@@ -19,21 +19,6 @@
                     }
                 }
             }
-            &:first-child {
-                .project-main .picture-of-project {
-                    background-image: url(./../../../asset/images/manage.png);
-                }
-            }
-            &:nth-child(2) {
-                .project-main .picture-of-project {
-                    background-image: url(./../../../asset/images/room.png);
-                }
-            }
-            &:nth-child(3) {
-                .project-main .picture-of-project {
-                    background-image: url(./../../../asset/images/stepform.png);
-                }
-            }
             .project-main {
                 .picture-of-project {
                     background-repeat: no-repeat;

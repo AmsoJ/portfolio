@@ -15,9 +15,13 @@ function ProjectLink() {
 
 function Linkage({projectName, pic, detail, techStack, link}) {
     return <a href={link} target="_blank" rel="noreferrer" className="project-link col-12 col-md-5 overflow-hidden shadow-lg bg-light rounded-3 p-0">
-        <div className="project-main position-relative" style={{height: "50vh"}}>
-            <div className="picture-of-project position-absolute" style={{height: "100%"}}></div>
-            <div className="picture-of-project position-absolute" style={{height: "100%"}}></div>
+        <div className="project-main position-relative" style={{height: "40vh"}}>
+            <div className="picture-of-project position-absolute" style={{height: "100%"}}>
+                <img className="img-fluid" src={pic} alt={projectName} />
+            </div>
+            <div className="picture-of-project position-absolute" style={{height: "100%"}}>
+                <img className="img-fluid" src={pic} alt={projectName} />
+            </div>
             
             <article className="project-detail-board postion-absolute text-center">
                 <h3 className="project-name" style={{fontFamily: "amaBold",}}>{projectName}</h3>

@@ -17,7 +17,7 @@ function Soft({element, detail, skill}) {
 }
 
 function Softskills({state}) {
-    return <section className={`soft-skills row g-0 justify-content-between position-absolute p-5 ${state ? null : "show"}`}>
+    return <section className={`soft-skills row g-0 justify-content-between p-5 ${state ? null : "show"}`}>
         {
             softdata.map(softskills => {
                 return <Soft

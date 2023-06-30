@@ -1,9 +1,5 @@
 @import './../../../paint/color';
 .tech-skills {
-    // gap: 2px;
-    // width: 100%;
-    // background-color: yellow;
-    // clip-path: circle(20% at 20%);
     padding-left: 100px;
     padding-right: 100px;
     clip-path: inset(0 0 0 100%);
@@ -41,7 +37,6 @@
             transform: rotateY(0deg);
             z-index: 2;
             background-color: $White;
-            // border: solid 2px $Gray;
             svg {
                 width: 50%;
                 height: 80%;
@@ -63,10 +58,15 @@
 
 @media screen  and (max-width: 600px){
     .tech-skills {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 6px;
+        padding-right: 6px;
+        clip-path: inset(0);
+        display: none;
+        // background-color: yellow;
+        &.show {
+            display: block;
+        }
         .tech {
-            width: 50%;
             height: 150px;
         }
     }

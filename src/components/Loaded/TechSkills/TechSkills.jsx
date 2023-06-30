@@ -3,7 +3,7 @@ import techdata from '../../../asset/Data/techdata';
 
 
 function Tech({skill, element}) {
-    return <article className="tech position-relative col-2 col-md-4 rounded-3">
+    return <article className="tech position-relative col-12 col-md-4 rounded-3">
     
         <div className="front shadow position-absolute rounded-3 d-flex align-items-center justify-content-center">
             {element}

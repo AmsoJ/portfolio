@@ -1,15 +1,32 @@
 @import './../../../paint/color';
 
 .about {
-    // min-height: 100vh;
-    // background-color: $Gray;
     .about-me-board {
         min-height: 300px;
         .figure-about {
-            height: 500px;
+            min-height: 500px;
             background-image: url(./../../../asset/images/about.jpg);
             background-size: cover;
             background-position: center;
+        }
+        .about-me-text {
+            .about-master {
+                // background-color: black;
+                width: 100%;
+            }
+            p {
+                font-family: amaReg;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        .about-me-board {
+            .figure-about {
+                min-height: 300px;
+            }
         }
     }
 }

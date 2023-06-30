@@ -3,8 +3,7 @@
 .soft-skills {
     top: 0;
     width: 100%;
-    // min-height: 100%;
-    background-color: red;
+    position: absolute;
     background-color: $White;
     clip-path: inset(0 100% 0 0);
     transition: .3s;
@@ -73,9 +72,16 @@
 
 @media screen  and (max-width: 600px){
     .soft-skills {
+        position: static;
+        clip-path: inset(0);
+        display: none;
+        &.show {
+            display: block;
+        }
         .soft {
             height: min-content;
             padding: 5px;
+            margin-bottom: 10px;
             .icon {
                 display: none;
             }

@@ -2,7 +2,7 @@ import './softskills.scss';
 import softdata from '../../../asset/Data/softdata';
 
 function Soft({element, detail, skill}) {
-    return <article className="soft d-flex flex-column justify-content-between col-12 p-4 rounded-3" style={{width: "calc(100% / 3.2)"}}>
+    return <article className="soft d-flex flex-column justify-content-between col-12 col-md-3 rounded-3">
         <div className="icon">
             {element}
         </div>
@@ -17,7 +17,7 @@ function Soft({element, detail, skill}) {
 }
 
 function Softskills({state}) {
-    return <section className={`soft-skills row justify-content-between position-absolute p-5 ${state ? null : "show"}`}>
+    return <section className={`soft-skills row g-0 justify-content-between position-absolute p-5 ${state ? null : "show"}`}>
         {
             softdata.map(softskills => {
                 return <Soft

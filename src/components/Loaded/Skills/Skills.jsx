@@ -9,12 +9,12 @@ function Skills() {
 
     return <section className="skills mt-5 container">
 
-    <div className="operation row justify-content-around">
-        <button className={`btn ${condition ? "btn-dark" : "btn-outline-dark"} col-2`} onClick={() => setCondition(true)}>
+    <div className="operation d-flex justify-content-center">
+        <button className={`btn ${condition ? "btn-dark" : "btn-outline-dark"}`} onClick={() => setCondition(true)}>
             Tech Skills
         </button>
 
-        <button className={`btn ${condition ? "btn-outline-dark" : "btn-dark"} col-2`} onClick={() => setCondition(false)}>
+        <button className={`btn ${condition ? "btn-outline-dark" : "btn-dark"}`} onClick={() => setCondition(false)}>
             Soft Skills
         </button>
     </div>

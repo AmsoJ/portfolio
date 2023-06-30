@@ -3,11 +3,21 @@
 .skills {
     // background-color: $Black;
     .operation {
+        gap: 20px;
         button {
             font-family: amaReg;
             &.btn-dark {
                 font-family: amaBold;
             }
         }
+    }
+    .showscreen {
+        // height: 200vh;
+    }
+}
+
+@media screen  and (max-width: 600px){
+    .skills {
+        padding: 0;
     }
 }

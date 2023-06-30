@@ -15,6 +15,7 @@
         perspective: 400px;
         transform-style: preserve-3d;
         isolation: isolate;
+        height: 250px;
         &:hover {
             .front,
             .back {
@@ -42,7 +43,8 @@
             background-color: $White;
             // border: solid 2px $Gray;
             svg {
-                font-size: 100px;
+                width: 50%;
+                height: 80%;
             }
 
         }
@@ -53,8 +55,19 @@
             overflow: hidden;
             .lang {
                 font-family: amaReg;
-                font-size: 2vw;
+                font-size: 4vw;
             }
+        }
+    }
+}
+
+@media screen  and (max-width: 600px){
+    .tech-skills {
+        padding-left: 12px;
+        padding-right: 12px;
+        .tech {
+            width: 50%;
+            height: 150px;
         }
     }
 }

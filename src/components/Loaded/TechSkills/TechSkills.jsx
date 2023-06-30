@@ -3,7 +3,7 @@ import techdata from '../../../asset/Data/techdata';
 
 
 function Tech({skill, element}) {
-    return <article className="tech position-relative col-2 col-md-4 rounded-3" style={{width: "calc(100% / 3)", height: "250px"}}>
+    return <article className="tech position-relative col-2 col-md-4 rounded-3">
     
         <div className="front shadow position-absolute rounded-3 d-flex align-items-center justify-content-center">
             {element}
@@ -18,7 +18,7 @@ function Tech({skill, element}) {
 
 
 function TechSkills({state}) {
-    return <section className={`tech-skills g-0 row py-5 ${state ? "show" : null}`}>
+    return <section className={`tech-skills g-0 row py-5  ${state ? "show" : null}`}>
     
         {
             techdata.map(techskill => {

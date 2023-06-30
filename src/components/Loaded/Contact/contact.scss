@@ -2,8 +2,54 @@
 
 .contact {
     min-height: 100vh;
-    background-image: url(./../../../asset/images/3922.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./../../../asset/images/3922.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    .form-holder {
+        .my-form {
+            background-color: $Dark-gray-transparent;
+            backdrop-filter: blur(10px);
+            label {
+                color: $Gray;
+                margin-bottom: 10px;
+                .labeling {
+                    font-family: amaBold;
+                }
+                input {
+                    outline: none;
+                    font-family: amaReg;
+                    background-color: transparent;
+                    border: 2px solid $Dark-gray;
+                    color: $White;
+                    &::placeholder {
+                        color: $Dark-gray;
+                    }
+                    &:focus {
+                        background-color: $Black;
+                        border-color: $White;
+                    }
+                    &:valid {
+                        background-color: $Black;
+                    }
+                }
+            }
+            label[for = "message"] {
+                textarea {
+                    border: 2px solid $Dark-gray;
+                    outline: none;
+                    background-color: transparent;
+                    font-family: amaReg;
+                    color: $White;
+                    &:focus {
+                        background-color: $Black;
+                        border-color: $White;
+                    }
+                    &:valid {
+                        background-color: $Black;
+                    }
+                }
+            }
+        }
+    }
 }

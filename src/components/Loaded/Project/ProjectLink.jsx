@@ -1,4 +1,4 @@
-import projectdata from "../../../asset/Data/projectdata";
+import projectdata from './projectdata';
 
 function ProjectLink() {
     return <div className="project-board container row justify-content-center mx-auto">
@@ -14,7 +14,7 @@ function ProjectLink() {
 }
 
 function Linkage({projectName, pic, detail, techStack, link}) {
-    return <a href={link} target="_blank" rel="noreferrer" className="project-link col-5 overflow-hidden shadow-lg bg-light rounded-3 p-0">
+    return <a href={link} target="_blank" rel="noreferrer" className="project-link col-12 col-md-5 overflow-hidden shadow-lg bg-light rounded-3 p-0">
         <div className="project-main position-relative" style={{height: "50vh"}}>
             <div className="picture-of-project position-absolute" style={{height: "100%", backgroundImage: `url(${pic})`}}></div>
             <div className="picture-of-project position-absolute" style={{height: "100%", backgroundImage: `url(${pic})`}}></div>

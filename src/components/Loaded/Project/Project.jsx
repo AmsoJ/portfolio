@@ -1,6 +1,5 @@
 import ProjectLink from './ProjectLink';
 import './project.scss';
-// import project1 from './../../../asset/images/room.png';
 
 function Project() {
     return <section className="project container-fluid py-5">

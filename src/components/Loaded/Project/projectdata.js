@@ -1,6 +1,6 @@
-import manage from './../images/manage.png';
-import multiform from './../images/stepform.png';
-import room from './../images/room.png';
+import manage from './../../../asset/images/manage.png';
+import multiform from './../../../asset/images/stepform.png';
+import room from './../../../asset/images/room.png';
 
 
 const projectdata = [

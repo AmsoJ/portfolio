@@ -19,23 +19,39 @@
                     }
                 }
             }
-            .picture-of-project {
-                // background-image: url(./../../../asset/images/manage.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-                inset: 0;
-                z-index: 5;
-                transition: .3s;
-                &:first-child {
-                    clip-path: inset(50% 0 0 0);
-                    transition-delay: .3s;
-                }
-                &:nth-child(2) {
-                    clip-path: inset(0 0 50% 0);
+            &:first-child {
+                .project-main .picture-of-project {
+                    background-image: url(./../../../asset/images/manage.png);
                 }
             }
-            .project-detail-board {
-                inset: 0;
+            &:nth-child(2) {
+                .project-main .picture-of-project {
+                    background-image: url(./../../../asset/images/room.png);
+                }
+            }
+            &:nth-child(3) {
+                .project-main .picture-of-project {
+                    background-image: url(./../../../asset/images/stepform.png);
+                }
+            }
+            .project-main {
+                .picture-of-project {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    inset: 0;
+                    z-index: 5;
+                    transition: .3s;
+                    &:first-child {
+                        clip-path: inset(50% 0 0 0);
+                        transition-delay: .3s;
+                    }
+                    &:nth-child(2) {
+                        clip-path: inset(0 0 50% 0);
+                    }
+                }
+                .project-detail-board {
+                    inset: 0;
+                }
             }
         }
     }

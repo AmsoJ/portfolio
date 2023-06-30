@@ -1,0 +1,42 @@
+@import './.../../../../../paint/color';
+
+.project {
+    min-height: 100vh;
+    background-color: $Black;
+    .project-master {
+
+    }
+    .project-board {
+        gap: 20px;
+        .project-link {
+            &:hover {
+                .picture-of-project {
+                    &:first-child {
+                        left: 100%;
+                    }
+                    &:nth-child(2) {
+                        right: 100%;
+                    }
+                }
+            }
+            .picture-of-project {
+                // background-image: url(./../../../asset/images/manage.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                inset: 0;
+                z-index: 5;
+                transition: .3s;
+                &:first-child {
+                    clip-path: inset(50% 0 0 0);
+                    transition-delay: .3s;
+                }
+                &:nth-child(2) {
+                    clip-path: inset(0 0 50% 0);
+                }
+            }
+            .project-detail-board {
+                inset: 0;
+            }
+        }
+    }
+}

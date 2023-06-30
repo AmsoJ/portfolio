@@ -1,0 +1,60 @@
+@import './../../../paint/color';
+.tech-skills {
+    // gap: 2px;
+    // width: 100%;
+    // background-color: yellow;
+    // clip-path: circle(20% at 20%);
+    padding-left: 100px;
+    padding-right: 100px;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path .3s;
+    &.show {
+        clip-path: inset(0);
+    }
+    .tech {
+        perspective: 400px;
+        transform-style: preserve-3d;
+        isolation: isolate;
+        &:hover {
+            .front,
+            .back {
+                transition: .3s;
+            }
+            .back {
+                transform: rotateY(0deg);
+                z-index: 2;
+            }
+            .front {
+                transform: rotateY(-180deg);
+                z-index: -1;
+            }
+        }
+        .front,
+        .back {
+            top: 0;
+            left: 0;
+            inset: 10px 20px;
+            transition: 3s;
+        }
+        .front {
+            transform: rotateY(0deg);
+            z-index: 2;
+            background-color: $White;
+            // border: solid 2px $Gray;
+            svg {
+                font-size: 100px;
+            }
+
+        }
+        .back {
+            transform: rotateY(180deg);
+            z-index: -1;
+            background-color: $Black;
+            overflow: hidden;
+            .lang {
+                font-family: amaReg;
+                font-size: 2vw;
+            }
+        }
+    }
+}

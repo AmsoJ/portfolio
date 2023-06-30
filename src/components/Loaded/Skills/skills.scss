@@ -1,0 +1,13 @@
+@import './../../../paint/color';
+
+.skills {
+    // background-color: $Black;
+    .operation {
+        button {
+            font-family: amaReg;
+            &.btn-dark {
+                font-family: amaBold;
+            }
+        }
+    }
+}

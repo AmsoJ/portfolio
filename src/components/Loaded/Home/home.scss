@@ -1,0 +1,25 @@
+@import './../../../paint/color';
+
+.home {
+    .introduction {
+        .profile-image {
+            background-image: url(./../../../asset/images/profilepic.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .greeting {
+            font-family: amaReg;
+            color: $Gray;
+        }
+        .name {
+            .fullname {
+                font-family: amaBold;
+                font-size: 4rem;
+            }
+        }
+        .about-me {
+            color: $Dark-gray;
+        }
+    }
+}

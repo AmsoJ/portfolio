@@ -1,0 +1,12 @@
+@import './../../paint/color';
+
+.loading {
+    height: 100vh;
+    background-color: $Black;
+    .load {
+        .name {
+            font-family: amaReg;
+            color: $Dark-gray;
+        }
+    }
+}

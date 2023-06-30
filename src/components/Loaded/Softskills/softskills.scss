@@ -1,0 +1,68 @@
+@import './../../../paint/color';
+
+.soft-skills {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $White;
+    clip-path: inset(0 100% 0 0);
+    transition: .3s;
+    gap: 10px;
+    &.show {
+        clip-path: inset(0);
+    }
+    .soft {
+        border: 2px solid $Gray;
+        &:first-child {
+            background-color: $Black;
+            border: none;
+            .icon svg {
+                color: $White;
+            }
+            .details {
+                .skill {
+                    color: $White;
+                }
+                .sum {
+                    color: $Gray;
+                }
+            }
+            &:hover {
+                border: none;
+                .details {
+                    .skill {
+                        color: $White;
+                    }
+                    .sum {
+                        color: $Dark-gray;
+                    }
+                }
+            }
+        }
+        .icon svg {
+            font-size: 50px;
+            color: $Black;
+        }
+        .details {
+            .skill {
+                color: $Dark-gray;
+                font-family: amaBold;
+            }
+            .sum {
+                color: $Gray;
+                font-family: amaReg;
+            }
+        }
+        &:hover {
+            border-color: $Black;
+            .details {
+                .skill {
+                    color: $Black;
+                }
+                .sum {
+                    color: $Dark-gray;
+                }
+            }
+        }
+    }
+}

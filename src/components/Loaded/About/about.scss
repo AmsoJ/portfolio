@@ -1,0 +1,15 @@
+@import './../../../paint/color';
+
+.about {
+    // min-height: 100vh;
+    // background-color: $Gray;
+    .about-me-board {
+        min-height: 300px;
+        .figure-about {
+            height: 500px;
+            background-image: url(./../../../asset/images/about.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

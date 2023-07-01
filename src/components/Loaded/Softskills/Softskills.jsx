@@ -2,7 +2,7 @@ import './softskills.scss';
 import softdata from '../../../asset/Data/softdata';
 
 function Soft({element, detail, skill}) {
-    return <article className="soft d-flex flex-column justify-content-between col-12 col-md-3 rounded-3">
+    return <article className="soft trans d-flex flex-column justify-content-between col-12 col-md-3 rounded-3">
         <div className="icon">
             {element}
         </div>

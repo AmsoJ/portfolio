@@ -3,4 +3,63 @@
 .loaded {
     min-height: 100vh;
     background-color: $White;
+    overflow-x: hidden;
+    &.darkmode {
+        background-color: $Black;
+    }
+    .cursor {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $Black;
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+        transition: transform .5s;
+        opacity: 0;
+        &.links {
+            transform: scale(10);
+            background-color: $White;
+            mix-blend-mode: difference;
+            opacity: 1;
+        }
+        &.photo {
+            transform: scale(50);
+            background-color: $White;
+            mix-blend-mode: exclusion;
+            opacity: 1;
+        }
+        &.beep {
+            animation: beepCursor 1 .5s forwards;
+            &:first-child {
+                animation-delay: 0s;
+            }
+            &:nth-child(2) {
+                animation-delay: .1s;
+            }
+            &:last-child {
+                animation-delay: .2;
+            }
+        }
+        @keyframes beepCursor {
+            0% {
+                background-color: $Black;
+                opacity: 1;
+            }
+            100% {
+                background-color: $White;
+                opacity: .2;
+                transform: scale(70);
+            }
+        }
+        &:first-child {
+            transition-delay: .3s;
+        }
+        &:nth-child(2) {
+            transition-delay: .4s;
+        }
+        &:last-child {
+            transition-delay: .5s;
+        }
+    }
 }

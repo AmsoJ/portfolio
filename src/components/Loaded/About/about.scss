@@ -1,6 +1,20 @@
 @import './../../../paint/color';
 
 .about {
+    .isRevealLeft {
+        clip-path: inset(0 0 0 100%);
+        transition-delay: clip-path .3s;
+    }
+    .isRevealRight {
+        clip-path: inset(0 50%);
+    }
+    .isRevealLeft,
+    .isRevealRight {
+        &.show {
+            clip-path: inset(0);
+            transition:clip-path 2s;
+        }
+    }
     .about-me-board {
         min-height: 300px;
         .figure-about {
@@ -10,12 +24,23 @@
             background-position: center;
         }
         .about-me-text {
+            overflow: hidden;
             .about-master {
                 // background-color: black;
                 width: 100%;
+                transform: translate(500px);
+                transition: .2s 1s;
+                &.show {
+                    transform: translate(0px);
+                }
             }
             p {
                 font-family: amaReg;
+                transform: translate(-500px);
+                &.show {
+                    transform: translate(0px);
+                    transition: .3s 1s;
+                }
             }
         }
     }

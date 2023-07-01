@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import './home.scss';
 
 function Home() {
-    return <section className="home container">
+    return <section className="home container-fluid p-0">
         <Header />
 
         <div className="introduction container mt-4 text-center p-3">

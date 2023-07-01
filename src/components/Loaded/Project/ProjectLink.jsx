@@ -1,4 +1,5 @@
 import projectdata from './projectdata';
+import { useGlobalContext } from '../GlobalHooks/Context';
 
 function ProjectLink() {
     return <div className="project-board container row align-items-center justify-content-center mx-auto">
@@ -14,7 +15,9 @@ function ProjectLink() {
 }
 
 function Linkage({projectName, pic, detail, techStack, link}) {
-    return <a href={link} target="_blank" rel="noreferrer" className="project-link col-12 col-md-5 overflow-hidden shadow-lg bg-light rounded-3 p-0">
+    const {setCursorAction} = useGlobalContext();
+    
+    return <a href={link} target="_blank" rel="noreferrer" className="project-link col-12 col-md-5 overflow-hidden shadow-lg bg-light rounded-3 p-0" onMouseEnter={() => setCursorAction("photo")} onMouseLeave={() => setCursorAction("null")}>
         <div className="project-main position-relative" style={{height: "40vh"}}>
             <div className="picture-of-project position-absolute" style={{height: "100%"}}>
                 <img src={pic} alt={projectName} />

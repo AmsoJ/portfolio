@@ -1,26 +1,31 @@
-import {FaBriefcase,FaHome, FaSearchLocation, FaLocationArrow} from 'react-icons/fa';
+import {FaBriefcase, FaHome, FaSearchLocation, FaSun, FaPhone} from 'react-icons/fa';
 
 
 const navData = [
     {
         id: 0,
         element: <FaHome />,
-        title: "Home",
+        title: "home",
     },
     {
         id: 1,
         element: <FaSearchLocation />,
-        title: "About",
+        title: "about",
     },
     {
         id: 2,
         element: <FaBriefcase />,
-        title: "Project"
+        title: "project"
     },
     {
         id: 3,
-        element: <FaLocationArrow />,
-        title: "Location"
+        element: <FaPhone />,
+        title: "contact"
+    },
+    {
+        id: 4,
+        element: <FaSun />,
+        title: "theme"
     }
 ]
 

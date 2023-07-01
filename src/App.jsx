@@ -1,17 +1,9 @@
-import { useState, useEffect } from "react";
 import Loading from "./components/Loading/Loading";
 import Loaded from "./components/Loaded/Loaded";
+import { useGlobalContext } from "./components/Loaded/GlobalHooks/Context";
 
 function App() {
-  const [load, setLoad] = useState(false);
-
-  useEffect(()=> {
-    setTimeout(() => {
-      setLoad(true);
-    }, () => Math.floor(Math.random() * 5000 + 3000))
-  }, []);
-
-
+  const {load} = useGlobalContext();
 
   return load ? <Loaded /> : <Loading />;
 }

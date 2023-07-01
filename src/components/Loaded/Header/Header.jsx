@@ -1,14 +1,13 @@
 import './header.scss';
 import Nav from '../Navigate/Nav';
 import { useGlobalContext } from '../GlobalHooks/Context';
-import { FaHamburger, Me } from 'react-icons/fa';
-
+import {AiOutlineMenu} from 'react-icons/ai';
 function Header() {
-    const {staticHeader} = useGlobalContext();
+    const {staticHeader, setNavMode} = useGlobalContext();
 
-    return <header className={`master container-fluid d-flex justify-content-center ${staticHeader ? "nailed" : null}`}>
+    return <header className={`master container-fluid d-flex justify-content-center align-items-center ${staticHeader ? "nailed" : null}`}>
         <Nav />
-        <FaHamburger className='menu-open' />
+        <AiOutlineMenu className='menu-open' onClick={() => setNavMode(true)} />
     </header>
 }
 

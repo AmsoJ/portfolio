@@ -10,10 +10,17 @@
         left: 0;
         z-index: 5;
     }
+    .menu-open {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .master {
-        
+        .menu-open {
+            display: block;
+            margin-left: auto;
+            font-size: 30px;
+        }
     }
 }

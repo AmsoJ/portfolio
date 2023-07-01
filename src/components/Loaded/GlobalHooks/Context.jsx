@@ -16,6 +16,8 @@ export const AppProvider  = ({children}) => {
 
     const [darkMode, setDarkMode] = useState(false);
 
+    const [navMode, setNavMode] = useState(false);
+
     // settimg time to load
     useEffect(()=> {
         setLoad(false);
@@ -91,6 +93,8 @@ export const AppProvider  = ({children}) => {
         darkMode,
         changeTheme,
         staticHeader,
+        navMode,
+        setNavMode
     }}>
         {children}
     </AppContext.Provider>

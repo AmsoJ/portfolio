@@ -1,11 +1,14 @@
 import navData from "../../../asset/Data/navData"
 import './nav.scss';
 import { useGlobalContext } from "../GlobalHooks/Context";
+import {FaWindowClose} from 'react-icons/fa';
+
 
 function Nav() {
-    const {setCursorAction, changeTheme, staticHeader} = useGlobalContext();
+    const {setCursorAction, changeTheme, staticHeader, navMode, setNavMode} = useGlobalContext();
     
-    return <nav className={`compass nav flex-column justify-content-center flex-md-row ${staticHeader ? "nailed" : null}`}>
+    return <nav className={`compass nav flex-column justify-content-center flex-md-row ${staticHeader ? "nailed" : null} ${navMode ? "show" : null}`}>
+        <FaWindowClose className="close-menu" onClick={() => setNavMode(false)} />
         {
             navData.map((navlink, navlinkIndex) => {
                 return <li 
@@ -15,7 +18,7 @@ function Nav() {
                     onMouseLeave={() => {setCursorAction("null");}}
                     style={{animationDelay: `.${navlinkIndex + 3}s`}}
                 >
-                    <a href={`#${navlink.title}`} onClick={e => changeTheme(e)}>
+                    <a href={`#${navlink.title}`} onClick={e => changeTheme(e)} className="d-flex align-items-center justify-content-center">
                         {navlink.element}{navlink.title}
                     </a>
                 </li>

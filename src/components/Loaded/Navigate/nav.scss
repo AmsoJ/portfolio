@@ -11,12 +11,18 @@
             }
         }
     }
+    .close-menu {
+        color: red;
+        font-size: 30px;
+        display: none;
+    }
     .point {
         a {
             font-size: 20px;
             color: $Gray;
             text-transform: capitalize;
             text-decoration: none;
+            gap: 5px;
             &:hover {
                 color: $Black;
             }
@@ -46,6 +52,10 @@
         z-index: 10;
         background-color: $Black;
         transform: translate(-100%);
+        transition: .3s;
+        &.show {
+            transform: translate(0%);
+        }
         .point {
             a {
                 font-size: 10vw;
@@ -53,6 +63,12 @@
                     display: none;
                 }
             }
+        }
+        .close-menu {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
     }
 }

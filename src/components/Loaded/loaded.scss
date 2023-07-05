@@ -4,27 +4,29 @@
     min-height: 100vh;
     background-color: $White;
     overflow-x: hidden;
+    transition: 2s;
     &.darkmode {
-        background-color: $Black;
+        background-color: $Deep-blue;
     }
     .cursor {
         display: block;
-        width: 10px;
-        height: 10px;
-        background-color: $Black;
+        width: 3px;
+        height: 3px;
+        background-color: $Dark-orange;
+        mix-blend-mode: difference;
         position: absolute;
-        z-index: 10;
+        z-index: 20;
         pointer-events: none;
         transition: transform .5s;
-        opacity: 0;
+        opacity: 1;
         &.links {
-            transform: scale(10);
+            transform: scale(50);
             background-color: $White;
             mix-blend-mode: difference;
             opacity: 1;
         }
         &.photo {
-            transform: scale(50);
+            transform: scale(150);
             background-color: $White;
             mix-blend-mode: exclusion;
             opacity: 1;

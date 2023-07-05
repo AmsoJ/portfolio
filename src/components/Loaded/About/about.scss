@@ -15,6 +15,24 @@
             transition:clip-path 2s;
         }
     }
+    &.darkMode {
+        .about-me-board {
+            .figure-about {
+                background-image:  url(./../../../asset/images/globe.jpg);
+                transition: 1s;
+            }
+            .about-me-text {
+                .about-master {
+                    h2 {
+                        color: $Dark-orange;
+                    }
+                }
+                p {
+                    color: $White;
+                }
+            }
+        }
+    }
     .about-me-board {
         min-height: 300px;
         .figure-about {
@@ -22,6 +40,7 @@
             background-image: url(./../../../asset/images/about.jpg);
             background-size: cover;
             background-position: center;
+            transition: 1s;
         }
         .about-me-text {
             overflow: hidden;
@@ -37,6 +56,7 @@
             p {
                 font-family: amaReg;
                 transform: translate(-500px);
+                text-indent: 30px;
                 &.show {
                     transform: translate(0px);
                     transition: .3s 1s;

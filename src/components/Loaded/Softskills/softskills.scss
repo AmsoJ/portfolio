@@ -13,6 +13,21 @@
     &.show {
         clip-path: inset(0);
     }
+    &.darkMode {
+        clip-path: circle(0% at 20%);
+        transition: 1s 1s;
+        background-color: $Deep-blue;
+        &.show {
+            clip-path: circle(100% at 50%);
+            transition-delay: .5s;
+        }
+        .soft {
+            border-color: $Sec-dark-orange;
+            .icon svg {
+                color: $White;
+            }
+        }
+    }
     .soft {
         border: 2px solid $Gray;
         height: 200px;

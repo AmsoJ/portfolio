@@ -5,9 +5,9 @@ import {FaWindowClose} from 'react-icons/fa';
 
 
 function Nav() {
-    const {setCursorAction, changeTheme, staticHeader, navMode, setNavMode} = useGlobalContext();
+    const {setCursorAction, changeTheme, staticHeader, navMode, setNavMode, darkMode} = useGlobalContext();
     
-    return <nav className={`compass nav flex-column justify-content-center flex-md-row ${staticHeader ? "nailed" : null} ${navMode ? "show" : null}`}>
+    return <nav className={`compass nav flex-column justify-content-center flex-md-row ${staticHeader ? "nailed" : null} ${navMode ? "show" : null} ${darkMode ? "darkMode" : null}`}>
         <FaWindowClose className="close-menu" onClick={() => setNavMode(false)} />
         {
             navData.map((navlink, navlinkIndex) => {

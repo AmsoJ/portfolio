@@ -7,6 +7,29 @@
     &.show {
         clip-path: inset(0);
     }
+    &.darkMode {
+        clip-path: circle(0% at 20%);
+        transition: 1s 1s;
+        &.show {
+            clip-path: circle(100% at 50%);
+        }
+        .tech {
+            .front {
+                background-color: $Deep-blue;
+            }
+            .back {
+                background-color: $White;
+                .lang {
+                    color: $Deep-blue;
+                }
+            }
+            &:last-child .front {
+                svg {
+                    color: $White;
+                }
+            }
+        }
+    }
     .tech {
         perspective: 400px;
         transform-style: preserve-3d;
@@ -41,7 +64,6 @@
                 width: 50%;
                 height: 80%;
             }
-
         }
         .back {
             transform: rotateY(180deg);
@@ -51,6 +73,37 @@
             .lang {
                 font-family: amaReg;
                 font-size: 4vw;
+                color: $White;
+            }
+        }
+        &:first-child .front {
+            svg {
+                color: brown;
+            }
+        }
+        &:nth-child(2) .front {
+            svg {
+                color: blue;
+            }
+        }
+        &:nth-child(3) .front {
+            svg {
+                color: yellow;
+            }
+        }
+        &:nth-child(4) .front {
+            svg {
+                color: red;
+            }
+        }
+        &:nth-child(5) .front {
+            svg {
+                color: skyblue;
+            }
+        }
+        &:last-child .front {
+            svg {
+                color: $Gray
             }
         }
     }

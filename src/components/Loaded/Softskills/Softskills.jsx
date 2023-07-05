@@ -1,5 +1,6 @@
 import './softskills.scss';
 import softdata from '../../../asset/Data/softdata';
+import { useGlobalContext } from '../GlobalHooks/Context';
 
 function Soft({element, detail, skill}) {
     return <article className="soft trans d-flex flex-column justify-content-between col-12 col-md-3 rounded-3">
@@ -17,7 +18,9 @@ function Soft({element, detail, skill}) {
 }
 
 function Softskills({state}) {
-    return <section className={`soft-skills row g-0 justify-content-between p-5 ${state ? null : "show"}`}>
+    const {darkMode} = useGlobalContext();
+
+    return <section className={`soft-skills row g-0 justify-content-between p-5 ${state ? null : "show"} ${darkMode ? "darkMode" : null}`}>
         {
             softdata.map(softskills => {
                 return <Soft

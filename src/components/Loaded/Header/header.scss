@@ -3,12 +3,23 @@
 .master {
     min-height: 50px;
     transition: .3s;
+    &.darkMode {
+        .menu-open {
+            color: $Sec-dark-orange;
+        }
+        &.nailed {
+            background-color: $Sec-deep-blue;
+        }
+    }
     &.nailed {
         background-color: $Black;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 5;
+        z-index: 7;
+        .menu-open {
+            color: $White;
+        }
     }
     .menu-open {
         display: none;

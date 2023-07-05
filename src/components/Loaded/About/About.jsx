@@ -3,7 +3,7 @@ import { useGlobalContext } from '../GlobalHooks/Context';
 import { useEffect, useRef, useState } from 'react';
 
 function About() {
-    const {setCursorAction} = useGlobalContext();
+    const {setCursorAction, darkMode} = useGlobalContext();
 
     const [show, setShow] = useState(false);
 
@@ -30,7 +30,7 @@ function About() {
         }
     }, []);
 
-    return <section className="about container mt-5" id="about" ref={about}>
+    return <section className={`about container mt-5 ${darkMode ? "darkMode" : null}`} id="about" ref={about}>
 
         <div className="about-me-board row">
 
@@ -43,10 +43,18 @@ function About() {
                     <h2 className="display-3">About me</h2>
                 </header>
                 <p className={`lead ${show ? "show" : null}`}>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Graduated as a <mark>Mechanical Engineer</mark>, captivated by technology and 
+                    ignorant of its operation under the hood, I got intrigued by that fact, and that 
+                    alone gave me an adventure to embark on and explore.
+                </p>
+                <p className={`lead mt-1 ${show ? "show" : null}`}>
+                    I have successfully gained some front end skills, with and interest to gain prerequisite 
+                    knowledge on the backend, of which I have started to learn <mark>JAVA</mark> programming language. And since I
+                    <code> console.log("Hello World!")</code> to the console on my browser. I have the conviction that I belong to this space.
+                    {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                     Voluptatibus adipisci tempore aliquid veritatis fuga tempora 
                     mollitia neque natus optio repellat quas quam veniam, sit, velit, 
-                    consequatur eligendi saepe laboriosam officiis!
+                    consequatur eligendi saepe laboriosam officiis! */}
                 </p>
 
                 <div className="operations d-flex w-100 justify-content-center justify-content-md-start">

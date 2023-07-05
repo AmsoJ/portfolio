@@ -1,6 +1,54 @@
 @import './../../../paint/color';
 
 .compass {
+    &.darkMode {
+        &.nailed {
+            .point {
+                a {
+                    color: $On-sec-deep-blue;
+                    &:hover {
+                        color: $White;
+                    }
+                }
+            }
+        }
+        .point {
+            a {
+                color: $Sec-dark-orange;
+                &:hover {
+                    color: $White;
+                }
+            }
+        }
+    }
+    &.nailed {
+        .point {
+            a {
+                color: $White;
+                &:hover {
+                    color: $Gray;
+                }
+            }
+        }
+    }
+    .close-menu {
+        color: red;
+        font-size: 30px;
+        display: none;
+    }
+    .point {
+        a {
+            font-size: 20px;
+            color: $Gray;
+            text-transform: capitalize;
+            text-decoration: none;
+            gap: 5px;
+            &:hover {
+                color: $Black;
+            }
+        }
+        animation: scaleUp 1 .6s forwards;
+    }
     &.nailed {
         .point {
             a {
@@ -50,15 +98,23 @@
         top: 0;
         left: 0;
         z-index: 10;
-        background-color: $Black;
+        background-color: $Deep-blue;
         transform: translate(-100%);
         transition: .3s;
         &.show {
             transform: translate(0%);
         }
+        &.darkMode {
+            .point {
+                a {
+                    color: $On-sec-deep-blue;
+                }
+            }
+        }
         .point {
             a {
                 font-size: 10vw;
+                color: $Dark-orange;
                 svg {
                     display: none;
                 }
@@ -69,6 +125,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
+            
         }
     }
 }

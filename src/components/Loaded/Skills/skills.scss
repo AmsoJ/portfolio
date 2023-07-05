@@ -2,13 +2,34 @@
 
 .skills {
     // background-color: $Black;
+    &.darkMode {
+        .operation {
+            button {
+                &.activeBtn {
+                    background-color: $Dark-orange;
+                }
+                &.inactiveBtn {
+                    border: 1px solid $Dark-orange;
+                    color: $Dark-orange;
+                }
+            }
+        }
+    }
     .operation {
         gap: 20px;
         button {
             font-family: amaReg;
-            &.btn-dark {
+            &.activeBtn {
                 font-family: amaBold;
+                background-color: $Black;
+                color: $White;
             }
+            &.inactiveBtn {
+                background-color: transparent;
+                color: $Black;
+                border: 1px solid $Black;
+            }
+            
         }
     }
     .showscreen {

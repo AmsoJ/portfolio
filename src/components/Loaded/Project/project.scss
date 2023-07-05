@@ -2,8 +2,19 @@
 
 .project {
     background-color: $Black;
+    transition: 2s;
+    &.darkMode {
+        background-color: $On-sec-dark-orange;
+        .project-master {
+            .title {
+                color: $On-sec-deep-blue
+            }
+        }
+    }
     .project-master {
-
+        .title {
+            color: $White;
+        }
     }
     .project-board {
         gap: 20px;

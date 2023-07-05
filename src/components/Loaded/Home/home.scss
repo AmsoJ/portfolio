@@ -1,6 +1,27 @@
 @import './../../../paint/color';
 
 .home {
+    &.darkMode {
+        .introduction {
+            // .profile-image {
+            //     background-image: url(./../../../asset/images/profilepic.png);
+            //     background-repeat: no-repeat;
+            //     background-size: cover;
+            //     background-position: center;
+            // }
+            .greeting {
+                color: $Sec-deep-blue;
+            }
+            .name {
+                .fullname {
+                    color: $Dark-orange;
+                }
+            }
+            .about-me {
+                color: $Gray;
+            }
+        }
+    }
     .introduction {
         .profile-image {
             background-image: url(./../../../asset/images/profilepic.png);

@@ -1,9 +1,12 @@
 import Header from "../Header/Header";
 // import profilePic from './../../../asset/images/profilepic.png';
 import './home.scss';
+import { useGlobalContext } from "../GlobalHooks/Context";
 
 function Home() {
-    return <section className="home container-fluid p-0">
+    const {darkMode} = useGlobalContext();
+
+    return <section className={`home container-fluid p-0 ${darkMode ? "darkMode" : null}`}>
         <Header />
 
         <div className="introduction container mt-4 text-center p-3">
